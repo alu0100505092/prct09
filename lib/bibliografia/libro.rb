@@ -1,12 +1,10 @@
-class Libro 
-    attr_accessor :autor, :titulo, :serie, :editorial, :edicion, :f_pub, :isbn
+class Libro < PublicacionesPeriodicas
+    
+    attr_accessor :serie, :editorial, :edicion, :isbn
     def initialize(args)
-        @autor = args[:autor]
-        @titulo = args[:titulo]
         @serie = args[:serie]
         @editorial = args[:editorial]
         @edicion = args[:edicion]
-        @f_pub = args[:f_pub]
         @isbn = args[:isbn]
     end
     

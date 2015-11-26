@@ -1,10 +1,9 @@
-
+include Enumerable
 
 Nodo = Struct.new(:value, :next, :prev)
 
 class Lista 
     include Enumerable
-    include Comparable
     def initialize(nodo)
         @inicio = Nodo.new(nil)
         @fin = Nodo.new(nil)
@@ -46,5 +45,14 @@ class Lista
     
     def fin
         @fin.value
-    end    
+    end
+    
+    def each(&block)
+        tempo = @inicio
+        while tempo != nil
+            block.call(tempo)
+         #yield tempo.value
+            tempo=tempo.next
+        end
+    end
 end
