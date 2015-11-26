@@ -17,7 +17,6 @@ describe Bibliografia do
         @lista = Lista.new(0)
         @lista1 = Lista.new(0)  
         
-        
     end  
 
     
