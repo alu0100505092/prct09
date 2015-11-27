@@ -1,6 +1,6 @@
-include Comparable
+
 class PublicacionesPeriodicas
-    
+include Comparable  
     attr_accessor :referencia, :autor, :titulo, :num_pag, :f_pub
     
     def  initialize(args)
